@@ -6,7 +6,7 @@ html { box-sizing: border-box; }
 body {
 	margin: 0;
 	padding: 30px;
-	font-family:  'Alice', serif;
+	font-family: 'Alice', serif;
 	font-size: 18px;
 	line-height: 1.5;
 }
@@ -66,3 +66,108 @@ blockquote {
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
 
+.blog {
+	display: grid;
+	grid-template-columns: 1fr 4fr 2fr;
+	column-gap: 40px;
+}
+
+header,
+h2,
+.blog p,
+footer {
+	grid-column: 2 / 3;
+}
+
+.tip {
+	font-size: 16px;
+	padding: 10px 20px;
+	color: var(--tmava);
+	background-color: var(--svetla);
+}
+
+.tip-vlevo {
+	grid-column: 1 / 2;
+	border-right: 2px solid var(--zluta);
+	text-align: right;	
+}
+
+.tip-vpravo {
+	grid-column: 3 / 4;
+	border-left: 2px solid var(--zluta);
+	text-align: left;
+}
+
+.tip a {
+	color: var(--oranzova);
+}
+
+blockquote,
+figure {
+	grid-column: 1 / 4;
+}
+
+figure {
+	margin: 40px 0;
+}
+
+img {
+	width: 100%;
+}
+
+.tip img {
+	padding-top: 10px;
+}
+
+
+h1 {
+	color: var(--zelena);
+	font-size: 90px;
+	line-height: 1.2;
+	margin-bottom: 70px;
+}
+
+
+h2 {
+	color: var(--zelena);
+	font-size: 60px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+
+.meta {
+	color: var(--seda);
+	margin: 0;
+}
+
+figcaption {
+	color: var(--seda);
+}
+
+p {
+	margin: 10px 0;
+}
+
+blockquote {
+	color: var(--seda);
+	font-size: 40px;
+	text-align: center;
+	margin: 40px 0;
+}
+
+blockquote::before,
+blockquote::after {
+	content: "";
+	display: block;
+	width: 120px;
+	height: 2px;
+	background-color: var(--limetka);
+	margin: 20px auto;
+}
+
+footer,
+footer a {
+	color: var(--seda);
+	font-size: 14px;
+	margin-top: 30px;
+}
